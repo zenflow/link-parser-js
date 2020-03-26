@@ -14,13 +14,12 @@ jobs:
     - name: apt-get install packages
       run: sudo apt-get install autoconf-archive flex
     - name: set files as executable
-      run: chmod +x install_link-grammar.sh install_emsdk.sh
+      run: chmod +x install_link-grammar.sh install_emsdk.sh build.sh test.sh
     - name: install link-grammar
       run: sudo ./install_link-grammar.sh
     - name: install emsdk
       run: sudo ./install_emsdk.sh
-
-#    - name: install emsdk
-#      run: sudo ./js/install_emsdk.sh
-#    - name: build packaes
-#      run: sudo ./js/build_packages.sh
+    - name: build
+      run: sudo ./build.sh
+    - name: test
+      run: sudo ./test.sh
