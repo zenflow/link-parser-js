@@ -17,11 +17,12 @@ popd
 rm -rf dist
 mkdir dist
 
-# Compile link-parser.js & link-parser.wasm
+# Compile link-parser.js
 cp link-grammar/link-parser/.libs/link-parser link-parser.bc
 emcc -O3 link-parser.bc link-grammar/link-grammar/.libs/liblink-grammar.so \
 	--pre-js src/pre.js \
-	-s WASM=1 \
+	--memory-init-file 0 \
+	-s WASM=0 \
 	-s ALLOW_MEMORY_GROWTH=1 \
     -o dist/link-parser.js
 rm link-parser.bc

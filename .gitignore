@@ -1,3 +1,4 @@
 emsdk/
 link-grammar/
 dist/
+package-lock.json
