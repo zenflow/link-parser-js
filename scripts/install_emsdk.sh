@@ -1,7 +1,8 @@
 #!/bin/bash
 set -ex
 
-pushd "$(dirname "$0")"
+# Change directory to project root
+pushd "$(dirname "$0")/.."
 
 git clone https://github.com/emscripten-core/emsdk emsdk
 pushd emsdk

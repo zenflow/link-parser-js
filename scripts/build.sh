@@ -1,7 +1,8 @@
 #!/bin/bash
 set -ex
 
-pushd "$(dirname "$0")"
+# Change directory to project root
+pushd "$(dirname "$0")/.."
 
 # Activate emscripten sdk if not done already
 [ ! $EMSDK ] && pushd emsdk && source ./emsdk_env.sh && popd

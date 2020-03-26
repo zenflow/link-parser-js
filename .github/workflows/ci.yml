@@ -1,8 +1,6 @@
-name: C/C++ CI
+name: CI
 
-on:
-  push:
-    branches: [ master ]
+on: push
 
 jobs:
   build:
@@ -14,12 +12,12 @@ jobs:
     - name: apt-get install packages
       run: sudo apt-get install autoconf-archive flex
     - name: set files as executable
-      run: chmod +x install_link-grammar.sh install_emsdk.sh build.sh test.sh
+      run: cd scripts && chmod +x install_link-grammar.sh install_emsdk.sh build.sh test.sh
     - name: install link-grammar
-      run: sudo ./install_link-grammar.sh
+      run: sudo ./scripts/install_link-grammar.sh
     - name: install emsdk
-      run: sudo ./install_emsdk.sh
+      run: sudo ./scripts/install_emsdk.sh
     - name: build
-      run: sudo ./build.sh
+      run: sudo ./scripts/build.sh
     - name: test
-      run: sudo ./test.sh
+      run: sudo ./scripts/test.sh
