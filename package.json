@@ -1,0 +1,26 @@
+{
+  "name": "link-parser-js",
+  "version": "1.0.0",
+  "description": "Emscripten port of link-parser, the CLI for the CMU Link Grammar natural language parser",
+  "bin": "bin.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenflow/link-parser-js.git"
+  },
+  "keywords": [
+    "link-parser",
+    "link-grammar",
+    "link",
+    "parser",
+    "grammar"
+  ],
+  "author": {
+    "name": "Matthew Francis Brunetti",
+    "email": "zenflow87@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zenflow/link-parser-js/issues"
+  },
+  "homepage": "https://github.com/zenflow/link-parser-js#readme"
+}
