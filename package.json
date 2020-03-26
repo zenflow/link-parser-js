@@ -2,7 +2,11 @@
   "name": "link-parser-js",
   "version": "5.8.0",
   "description": "Emscripten port of link-parser, the CLI for the CMU Link Grammar natural language parser",
-  "bin": "bin.js",
+  "bin": "bin/link-parser.js",
+  "files": [
+    "bin/**",
+    "dist/**"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zenflow/link-parser-js.git"
