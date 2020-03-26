@@ -1,0 +1,26 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: apt-get install packages
+      run: sudo apt-get install autoconf-archive flex
+    - name: set files as executable
+      run: chmod +x install_link-grammar.sh install_emsdk.sh
+    - name: install link-grammar
+      run: sudo ./install_link-grammar.sh
+    - name: install emsdk
+      run: sudo ./install_emsdk.sh
+
+#    - name: install emsdk
+#      run: sudo ./js/install_emsdk.sh
+#    - name: build packaes
+#      run: sudo ./js/build_packages.sh
